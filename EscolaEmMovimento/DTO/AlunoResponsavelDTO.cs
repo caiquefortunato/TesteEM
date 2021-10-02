@@ -9,6 +9,5 @@ namespace WebService.DTO
     {
         public AlunoDTO Aluno { get; set; }
         public ResponsavelDTO Responsavel { get; set; }
-        public String Parentesco { get; set; }
     }
 }

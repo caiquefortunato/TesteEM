@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using WebService.DTO;
 using WebService.Entities;
@@ -20,6 +21,7 @@ namespace WebService.Controllers
             this.DBContext = DBContext;
         }
 
+        #region Get
         [HttpGet("GetResponsaveis")]
         public async Task<ActionResult<List<ResponsavelDTO>>> Get()
         {
@@ -30,7 +32,8 @@ namespace WebService.Controllers
                     Nome = s.Nome,
                     DataNascimento = s.DataNascimento,
                     Telefone = s.Telefone,
-                    Email = s.Email
+                    Email = s.Email,
+                    Parentesco = s.Parentesco
                 }
             ).ToListAsync();
 
@@ -43,5 +46,34 @@ namespace WebService.Controllers
                 return List;
             }
         }
+        #endregion
+
+        #region Set
+        [HttpPost("InsereResponsavel")]
+        public async Task<HttpStatusCode> InsereResponsavel(ResponsavelDTO Responsavel)
+        {
+            Responsavel responsavelDB = new Responsavel()
+            {
+                Id = Responsavel.Id,
+                Nome = Responsavel.Nome,
+                DataNascimento = Responsavel.DataNascimento,
+                Telefone = Responsavel.Telefone,
+                Parentesco = Responsavel.Parentesco,
+                Email = Responsavel.Email
+            };
+
+            if (Responsavel.VerificaObrigatoriedadeEmail())
+            {
+                DBContext.Responsavel.Add(responsavelDB);
+                await DBContext.SaveChangesAsync();
+
+                return HttpStatusCode.Created;
+            }
+            else
+            {
+                return HttpStatusCode.NoContent;
+            }
+        }
+        #endregion
     }
 }

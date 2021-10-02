@@ -13,5 +13,17 @@ namespace WebService.DTO
         public String Segmento { get; set; }
         public String Foto { get; set; }
         public String Email { get; set; }
+
+        public bool VerificaObrigatoriedadeEmail()
+        {
+            if (Segmento.Equals("Fundamental") && Email == null) return false;
+            else return true;
+        }
+
+        public bool VerificaSegmento()
+        {
+            if (Segmento.Equals("Fundamental") || Segmento.Equals("Infantil")) return true;
+            else return false;
+        }
     }
 }

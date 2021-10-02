@@ -9,6 +9,5 @@ namespace WebService.Entities
     {
         public int IdAluno { get; set; }
         public int IdResponsavel { get; set; }
-        public String Parentesco { get; set; }
     }
 }

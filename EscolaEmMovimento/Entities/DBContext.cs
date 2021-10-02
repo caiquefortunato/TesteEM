@@ -86,6 +86,12 @@ namespace WebService.Entities
                     .IsRequired()
                     .HasMaxLength(100)
                     .IsUnicode(false);
+
+                entity.Property(e => e.Parentesco)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
             });
             #endregion
 
@@ -94,16 +100,9 @@ namespace WebService.Entities
             {
                 entity.ToTable("aluno_responsavel").HasNoKey();
 
-                entity.Property(e => e.IdAluno)
-                    .IsRequired()
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.IdAluno).IsRequired().HasColumnType("int(11)");
 
-                entity.Property(e => e.IdResponsavel).HasColumnType("int(11)");
-
-                entity.Property(e => e.Parentesco)
-                    .IsRequired()
-                    .HasMaxLength(45)
-                    .IsUnicode(false);
+                entity.Property(e => e.IdResponsavel).IsRequired().HasColumnType("int(11)");
             });
             #endregion
 

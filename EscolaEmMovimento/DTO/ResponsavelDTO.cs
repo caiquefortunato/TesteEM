@@ -12,5 +12,12 @@ namespace WebService.DTO
         public DateTime DataNascimento { get; set; }
         public String Telefone { get; set; }
         public String Email { get; set; }
+        public String Parentesco { get; set; }
+
+        public bool VerificaObrigatoriedadeEmail()
+        {
+            if (Email == null) return false;
+            return true;
+        }
     }
 }
