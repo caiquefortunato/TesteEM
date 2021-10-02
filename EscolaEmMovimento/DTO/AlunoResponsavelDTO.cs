@@ -7,7 +7,7 @@ namespace WebService.DTO
 {
     public class AlunoResponsavelDTO
     {
-        public AlunoDTO Aluno { get; set; }
-        public ResponsavelDTO Responsavel { get; set; }
+        public int IdAluno { get; set; }
+        public int IdResponsavel { get; set; }
     }
 }

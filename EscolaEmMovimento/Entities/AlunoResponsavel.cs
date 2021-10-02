@@ -7,6 +7,7 @@ namespace WebService.Entities
 {
     public partial class AlunoResponsavel
     {
+        public int Id { get; set; }
         public int IdAluno { get; set; }
         public int IdResponsavel { get; set; }
     }

@@ -130,7 +130,6 @@ namespace WebService.Controllers
         {
             Aluno alunoDB = new Aluno()
             {
-                Id = Aluno.Id,
                 Nome = Aluno.Nome,
                 DataNascimento = Aluno.DataNascimento,
                 Segmento = Aluno.Segmento,
@@ -141,9 +140,28 @@ namespace WebService.Controllers
             if(Aluno.VerificaObrigatoriedadeEmail() && Aluno.VerificaSegmento())
             {
                 DBContext.Aluno.Add(alunoDB);
+                
+                await DBContext.SaveChangesAsync();
+                int idInserido = alunoDB.Id;
+                    
+                // Insere os responsáveis pelo aluno
+                foreach (var responsavel in Aluno.Responsaveis)
+                {
+                    int idResponsavel = Convert.ToInt32(responsavel.ToString());
+
+                    // Insere os responsáveis deste aluno
+                    AlunoResponsavel AlunoResponsavelDB = new AlunoResponsavel()
+                    {
+                        IdAluno = idInserido,
+                        IdResponsavel = idResponsavel
+                    };
+
+                    DBContext.AlunoResponsavel.Add(AlunoResponsavelDB);
+                }
                 await DBContext.SaveChangesAsync();
 
                 return HttpStatusCode.Created;
+                
             }
             else
             {
@@ -151,5 +169,6 @@ namespace WebService.Controllers
             } 
         }
         #endregion
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace WebService.DTO
         public String Segmento { get; set; }
         public String Foto { get; set; }
         public String Email { get; set; }
+        public ICollection Responsaveis { get; set; }
 
         public bool VerificaObrigatoriedadeEmail()
         {
@@ -24,6 +26,14 @@ namespace WebService.DTO
         {
             if (Segmento.Equals("Fundamental") || Segmento.Equals("Infantil")) return true;
             else return false;
+        }
+
+        public void DefineResponsaveis()
+        {
+            foreach(var responsavel in Responsaveis)
+            {
+                // insere na lista
+            }
         }
     }
 }

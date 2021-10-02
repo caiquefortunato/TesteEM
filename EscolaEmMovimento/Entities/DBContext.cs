@@ -98,11 +98,13 @@ namespace WebService.Entities
             #region Tabela Aluno x Responsavel
             modelBuilder.Entity<AlunoResponsavel>(entity =>
             {
-                entity.ToTable("aluno_responsavel").HasNoKey();
+                entity.ToTable("aluno_responsavel");
 
-                entity.Property(e => e.IdAluno).IsRequired().HasColumnType("int(11)");
+                entity.Property(e => e.Id).HasColumnType("int(11)");
 
-                entity.Property(e => e.IdResponsavel).IsRequired().HasColumnType("int(11)");
+                entity.Property(e => e.IdAluno).IsUnicode(false).IsRequired().HasColumnType("int(11)");
+
+                entity.Property(e => e.IdResponsavel).IsUnicode(false).IsRequired().HasColumnType("int(11)");
             });
             #endregion
 
