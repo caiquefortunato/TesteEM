@@ -19,7 +19,7 @@ namespace WebService.DTO
 
         public bool VerificaObrigatoriedadeEmail()
         {
-            if (Segmento.Equals("Fundamental") && Email == null) return false;
+            if (Segmento.Equals("Fundamental") && (Email == null || Email == String.Empty)) return false;
             else return true;
         }
 
