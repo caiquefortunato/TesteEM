@@ -220,3 +220,12 @@ C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\Escola
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.dll
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.pdb
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.genruntimeconfig.cache
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.csproj.AssemblyReference.cache
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -33,6 +34,7 @@ namespace WebService.Controllers
 
         #region Metodos GET
         [HttpGet("GetAlunos")]
+        [Authorize]
         public async Task<ActionResult<List<AlunoDTO>>> Get()
         {
             var List = await DBContext.Aluno.Select(
@@ -60,6 +62,7 @@ namespace WebService.Controllers
         }
 
         [HttpGet("GetAlunoByNome")]
+        [Authorize]
         public async Task<ActionResult<List<AlunoDTO>>> GetAlunoByNome(String nome)
         {
             var List = await DBContext.Aluno.Where(s => s.Nome.Contains(nome))
@@ -85,6 +88,7 @@ namespace WebService.Controllers
         }
 
         [HttpGet("GetAlunoBySegmento")]
+        [Authorize]
         public async Task<ActionResult<List<AlunoDTO>>> GetAlunoBySegmento(String segmento)
         {
             var List = await DBContext.Aluno.Where(s => s.Segmento == segmento)
@@ -110,6 +114,7 @@ namespace WebService.Controllers
         }
 
         [HttpGet("GetAlunoByResponsavel")]
+        [Authorize]
         public async Task<ActionResult<List<AlunoDTO>>> GetAlunoByResponsavel(String responsavel)
         {
             var Responsaveis = await DBContext.Responsavel.Where(s => s.Nome.Contains(responsavel)).ToListAsync();
@@ -156,8 +161,11 @@ namespace WebService.Controllers
 
         #region Sets
         [HttpPost("InsereAluno")]
+        [Authorize]
         public async Task<HttpStatusCode> InsereAluno(AlunoDTO Aluno)
         {
+            // Upload da foto
+            
             Aluno alunoDB = new Aluno()
             {
                 Nome = Aluno.Nome,

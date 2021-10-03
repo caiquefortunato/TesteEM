@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +9,7 @@ using System.Net;
 using System.Threading.Tasks;
 using WebService.DTO;
 using WebService.Entities;
+using WebService.Services;
 
 namespace WebService.Controllers
 {
@@ -23,6 +25,7 @@ namespace WebService.Controllers
 
         #region Get
         [HttpGet("GetResponsaveis")]
+        [Authorize]
         public async Task<ActionResult<List<ResponsavelDTO>>> Get()
         {
             var List = await DBContext.Responsavel.Select(
@@ -50,6 +53,7 @@ namespace WebService.Controllers
 
         #region Set
         [HttpPost("InsereResponsavel")]
+        [Authorize]
         public async Task<HttpStatusCode> InsereResponsavel(ResponsavelDTO Responsavel)
         {
             Responsavel responsavelDB = new Responsavel()
