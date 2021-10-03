@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebService.Entities;
 
 namespace WebService.DTO
 {
@@ -26,14 +27,6 @@ namespace WebService.DTO
         {
             if (Segmento.Equals("Fundamental") || Segmento.Equals("Infantil")) return true;
             else return false;
-        }
-
-        public void DefineResponsaveis()
-        {
-            foreach(var responsavel in Responsaveis)
-            {
-                // insere na lista
-            }
         }
     }
 }

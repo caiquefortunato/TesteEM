@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Threading.Tasks;
 using WebService.DTO;
@@ -23,6 +24,13 @@ namespace WebService.Controllers
             this.DBContext = DBContext;
         }
 
+        private static readonly Expression<Func<AlunoResponsavel, AlunoResponsavelDTO>> AsAlunoRespDTO =
+            x => new AlunoResponsavelDTO
+            {
+                IdAluno = x.IdAluno,
+                IdResponsavel = x.IdResponsavel
+            };
+
         #region Metodos GET
         [HttpGet("GetAlunos")]
         public async Task<ActionResult<List<AlunoDTO>>> Get()
@@ -35,9 +43,11 @@ namespace WebService.Controllers
                     DataNascimento = s.DataNascimento,
                     Segmento = s.Segmento,
                     Foto = s.Foto,
-                    Email = s.Email
+                    Email = s.Email,
+                    Responsaveis = DBContext.AlunoResponsavel.Where(a => a.IdAluno.Equals(s.Id)).Select(AsAlunoRespDTO).ToList()
                 }
             ).ToListAsync();
+
 
             if (List.Count < 0)
             {
@@ -60,7 +70,8 @@ namespace WebService.Controllers
                     DataNascimento = s.DataNascimento,
                     Segmento = s.Segmento,
                     Foto = s.Foto,
-                    Email = s.Email
+                    Email = s.Email,
+                    Responsaveis = DBContext.AlunoResponsavel.Where(a => a.IdAluno.Equals(s.Id)).Select(AsAlunoRespDTO).ToList()
                 }).ToListAsync();
 
             if (List == null)
@@ -84,7 +95,8 @@ namespace WebService.Controllers
                     DataNascimento = s.DataNascimento,
                     Segmento = s.Segmento,
                     Foto = s.Foto,
-                    Email = s.Email
+                    Email = s.Email,
+                    Responsaveis = DBContext.AlunoResponsavel.Where(a => a.IdAluno.Equals(s.Id)).Select(AsAlunoRespDTO).ToList()
                 }).ToListAsync();
 
             if (List == null)
@@ -109,8 +121,26 @@ namespace WebService.Controllers
                 foreach(var r in relacao) idsRelacao.Add(r.IdAluno);
             }
 
+            List<AlunoDTO> listaAlunos = new List<AlunoDTO>();
 
-            List<AlunoDTO> resultado = new List<AlunoDTO>();
+            foreach(var idAlunos in idsRelacao)
+            {
+                int idAluno = Convert.ToInt32(idAlunos.ToString());
+                // Busca os alunos por Id
+                AlunoDTO alunoId = await DBContext.Aluno.Where(s => s.Id == idAluno)
+                .Select(s => new AlunoDTO
+                {
+                    Id = s.Id,
+                    Nome = s.Nome,
+                    DataNascimento = s.DataNascimento,
+                    Segmento = s.Segmento,
+                    Foto = s.Foto,
+                    Email = s.Email,
+                    Responsaveis = DBContext.AlunoResponsavel.Where(a => a.IdAluno.Equals(s.Id)).Select(AsAlunoRespDTO).ToList()
+                }).FirstOrDefaultAsync();
+
+                listaAlunos.Add(alunoId);
+            }
 
 
             if (Responsaveis == null)
@@ -119,7 +149,7 @@ namespace WebService.Controllers
             }
             else
             {
-                return resultado;
+                return listaAlunos;
             }
         }
         #endregion

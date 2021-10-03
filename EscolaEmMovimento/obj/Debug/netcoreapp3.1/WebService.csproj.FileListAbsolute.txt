@@ -207,7 +207,6 @@ C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\Escola
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.csproj.AssemblyReference.cache
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.AssemblyInfoInputs.cache
 C:\Users\caique.b.fortunato\OneDrive - Accenture\Documents\GitHub\TesteEM\EscolaEmMovimento\obj\Debug\netcoreapp3.1\WebService.AssemblyInfo.cs
