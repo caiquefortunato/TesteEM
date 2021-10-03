@@ -162,10 +162,8 @@ namespace WebService.Controllers
         #region Sets
         [HttpPost("InsereAluno")]
         [Authorize]
-        public async Task<HttpStatusCode> InsereAluno(AlunoDTO Aluno)
+        public async Task<dynamic> InsereAluno(AlunoDTO Aluno)
         {
-            // Upload da foto
-            
             Aluno alunoDB = new Aluno()
             {
                 Nome = Aluno.Nome,
@@ -203,7 +201,7 @@ namespace WebService.Controllers
             }
             else
             {
-                return HttpStatusCode.NoContent;
+                return NotFound(new { message = "E-mail ou segmento não identificado para aluno" });
             } 
         }
         #endregion

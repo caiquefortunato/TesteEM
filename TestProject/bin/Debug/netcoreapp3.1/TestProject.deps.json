@@ -9,6 +9,7 @@
       "TestProject/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.9.4",
+          "Microsoft.TestPlatform.ObjectModel": "16.11.0",
           "NUnit": "3.13.1",
           "NUnit3TestAdapter": "3.17.0",
           "WebService": "1.0.0",
@@ -469,109 +470,109 @@
       },
       "Microsoft.NETCore.Platforms/3.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "Microsoft.TestPlatform.ObjectModel/16.9.4": {
+      "Microsoft.TestPlatform.ObjectModel/16.11.0": {
         "dependencies": {
           "NuGet.Frameworks": "5.0.0",
           "System.Reflection.Metadata": "1.6.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.TestPlatform.CoreUtilities.dll": {
+          "lib/netcoreapp2.1/Microsoft.TestPlatform.CoreUtilities.dll": {
             "assemblyVersion": "15.0.0.0",
             "fileVersion": "15.0.0.0"
           },
-          "lib/netstandard2.0/Microsoft.TestPlatform.PlatformAbstractions.dll": {
+          "lib/netcoreapp2.1/Microsoft.TestPlatform.PlatformAbstractions.dll": {
             "assemblyVersion": "15.0.0.0",
             "fileVersion": "15.0.0.0"
           },
-          "lib/netstandard2.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {
+          "lib/netcoreapp2.1/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {
             "assemblyVersion": "15.0.0.0",
             "fileVersion": "15.0.0.0"
           }
         },
         "resources": {
-          "lib/netstandard2.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "cs"
           },
-          "lib/netstandard2.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "cs"
           },
-          "lib/netstandard2.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/de/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "de"
           },
-          "lib/netstandard2.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "de"
           },
-          "lib/netstandard2.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/es/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "es"
           },
-          "lib/netstandard2.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "es"
           },
-          "lib/netstandard2.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "fr"
           },
-          "lib/netstandard2.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "fr"
           },
-          "lib/netstandard2.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/it/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "it"
           },
-          "lib/netstandard2.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "it"
           },
-          "lib/netstandard2.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "ja"
           },
-          "lib/netstandard2.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "ja"
           },
-          "lib/netstandard2.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "ko"
           },
-          "lib/netstandard2.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "ko"
           },
-          "lib/netstandard2.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "pl"
           },
-          "lib/netstandard2.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "pl"
           },
-          "lib/netstandard2.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/netstandard2.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "pt-BR"
           },
-          "lib/netstandard2.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "ru"
           },
-          "lib/netstandard2.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "ru"
           },
-          "lib/netstandard2.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "tr"
           },
-          "lib/netstandard2.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "tr"
           },
-          "lib/netstandard2.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/netstandard2.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "zh-Hans"
           },
-          "lib/netstandard2.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+          "lib/netcoreapp2.1/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
             "locale": "zh-Hant"
           },
-          "lib/netstandard2.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+          "lib/netcoreapp2.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
             "locale": "zh-Hant"
           }
         }
       },
       "Microsoft.TestPlatform.TestHost/16.9.4": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "16.9.4",
+          "Microsoft.TestPlatform.ObjectModel": "16.11.0",
           "Newtonsoft.Json": "10.0.1"
         },
         "runtime": {
@@ -1974,12 +1975,12 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/16.9.4": {
+    "Microsoft.TestPlatform.ObjectModel/16.11.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-t43y1MZYshZFfc/g8nzy4o86PW2WfFcoQ+MjgYUlfj1pptKHc7Xr+R6sFBODA+y1I+Mc+Ujzme/c2cGX2AuOwQ==",
-      "path": "microsoft.testplatform.objectmodel/16.9.4",
-      "hashPath": "microsoft.testplatform.objectmodel.16.9.4.nupkg.sha512"
+      "sha512": "sha512-EiknJx9N9Z30gs7R+HHhki7fA8EiiM3pwD1vkw3bFsBC8kdVq/O7mHf1hrg5aJp+ASO6BoOzQueD2ysfTOy/Bg==",
+      "path": "microsoft.testplatform.objectmodel/16.11.0",
+      "hashPath": "microsoft.testplatform.objectmodel.16.11.0.nupkg.sha512"
     },
     "Microsoft.TestPlatform.TestHost/16.9.4": {
       "type": "package",
