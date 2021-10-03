@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +16,28 @@ namespace WebService.Controllers
     [ApiController]
     public class AcessoController : ControllerBase
     {
+        private readonly DBContext DBContext;
+        public AcessoController(DBContext DBContext)
+        {
+            this.DBContext = DBContext;
+        }
+
         #region Login
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody] UsuarioDTO model)
+        public async Task<ActionResult<dynamic>> Authenticate([FromBody] UsuarioDTO usuarioDTO)
         {
             try
             {
-                var user = Usuario.Get(model.Username, model.Password);
+                UsuarioDTO user = await DBContext.Usuario.Select(
+                    u => new UsuarioDTO
+                    {
+                        Id = u.Id,
+                        Username = u.Username,
+                        Password = u.Password,
+                        Role = u.Role
+                    })
+                .FirstOrDefaultAsync(u => u.Username == usuarioDTO.Username.ToLower() && u.Password == usuarioDTO.Password);
 
                 if (user == null)
                     return NotFound(new { message = "Usuário ou senha inválidos" });

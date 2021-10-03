@@ -8,13 +8,10 @@ namespace WebService.Entities
 {
     public class Usuario
     {
-        public static UsuarioDTO Get (string username, string password)
-        {
-            var usuarios = new List<UsuarioDTO>();
-            usuarios.Add(new UsuarioDTO { Id = 1, Username = "batman", Password = "batman", Role = "manager" });
-            usuarios.Add(new UsuarioDTO { Id = 1, Username = "batman", Password = "batman", Role = "employee" });
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
 
-            return usuarios.Where(x => x.Username.ToLower() == username.ToLower() && x.Password.ToLower() == password).First();
-        }
     }
 }

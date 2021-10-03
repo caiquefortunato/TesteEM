@@ -23,6 +23,7 @@ namespace WebService.Entities
         public virtual DbSet<Aluno> Aluno { get; set; }
         public virtual DbSet<Responsavel> Responsavel { get; set; }
         public virtual DbSet<AlunoResponsavel> AlunoResponsavel { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -105,6 +106,30 @@ namespace WebService.Entities
                 entity.Property(e => e.IdAluno).IsUnicode(false).IsRequired().HasColumnType("int(11)");
 
                 entity.Property(e => e.IdResponsavel).IsUnicode(false).IsRequired().HasColumnType("int(11)");
+            });
+            #endregion
+
+            #region Tabela Usuario
+            modelBuilder.Entity<Usuario>(entity =>
+            {
+                entity.ToTable("usuario");
+
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.Username)
+                    .IsRequired()
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Password)
+                    .IsRequired()
+                    .HasMaxLength(45)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Role)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
             });
             #endregion
 
